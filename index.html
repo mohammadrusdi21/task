@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Media ajar interaktif 31 paket project praktikum Pemrograman Web SMK.">
+  <title>Lab Web — 31 Project Interaktif</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Lab Web Beranda"><span class="brand-mark">&lt;/&gt;</span><span>LAB<span class="brand-light">WEB</span><small>MEDIA AJAR INTERAKTIF | By: Mohammad Rusdi</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka navigasi">☰</button>
+    <nav id="mainNav">
+      <a href="#beranda" class="nav-link active">Beranda</a>
+      <a href="#paket" class="nav-link">Paket Project</a>
+      <a href="#panduan" class="nav-link">Panduan</a>
+      <a href="#penilaian" class="nav-link">Penilaian</a>
+    </nav>
+    <div class="top-chip">HTML <b>CSS</b> JS</div>
+  </header>
+
+  <main>
+    <section class="hero" id="beranda">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> PEMROGRAMAN WEB • SMK / PPLG</div>
+        <h1>Belajar dengan<br><span>membangun project.</span></h1>
+        <p>Jelajahi 31 tantangan project web. Pilih studi kasus, pelajari fitur, kerjakan tahap demi tahap, lalu ukur hasil belajarmu.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#paket">Jelajahi paket <span>→</span></a>
+          <a class="btn btn-ghost" href="#panduan">Cara menggunakan</a>
+        </div>
+        <div class="hero-meta"><span>● 31 paket project</span><span>● 4 tingkat kesulitan</span><span>● Progres tersimpan</span></div>
+      </div>
+      <div class="hero-art" aria-label="Ilustrasi kode pemrograman">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="code-window">
+          <div class="window-head"><span></span><span></span><span></span><small>project.js</small></div>
+          <div class="code-lines">
+            <div><i>01</i><span class="purple">const</span> project = {</div>
+            <div><i>02</i>&nbsp;&nbsp;ide: <span class="green">"Kreatif"</span>,</div>
+            <div><i>03</i>&nbsp;&nbsp;skill: [<span class="orange">"HTML"</span>,</div>
+            <div><i>04</i>&nbsp;&nbsp;&nbsp;&nbsp;<span class="orange">"CSS"</span>, <span class="orange">"JavaScript"</span>],</div>
+            <div><i>05</i>&nbsp;&nbsp;semangat: <span class="blue">true</span></div>
+            <div><i>06</i>};</div>
+            <div class="code-gap"><i>07</i><span class="purple">function</span> <span class="blue">mulaiBelajar</span>() {</div>
+            <div><i>08</i>&nbsp;&nbsp;<span class="purple">return</span> <span class="green">"Buat sesuatu!"</span>;</div>
+            <div><i>09</i>}</div>
+          </div>
+          <div class="code-footer"><span>●●●</span> <span>Ready to build</span><b>100%</b></div>
+        </div>
+        <div class="floating-tag tag-html">◇ HTML5</div><div class="floating-tag tag-css">✦ CSS3</div><div class="floating-tag tag-js">JS</div>
+      </div>
+    </section>
+
+    <section class="stats-grid" aria-label="Ringkasan media ajar">
+      <article class="stat-card"><span class="stat-icon">▦</span><div><strong>31</strong><small>Paket project</small></div></article>
+      <article class="stat-card"><span class="stat-icon violet">⌘</span><div><strong>3</strong><small>Teknologi utama</small></div></article>
+      <article class="stat-card"><span class="stat-icon orange-bg">◈</span><div><strong>4</strong><small>Tingkat kesulitan</small></div></article>
+      <article class="stat-card"><span class="stat-icon green-bg">✓</span><div><strong id="completedCount">0</strong><small>Project selesai</small></div></article>
+    </section>
+
+    <section class="section" id="paket">
+      <div class="section-heading">
+        <div><div class="eyebrow">PILIH TANTANGANMU</div><h2>31 Paket <span>Project</span></h2><p>Setiap paket berisi studi kasus, fitur wajib, dan tantangan pengembangan.</p></div>
+        <div class="progress-mini"><div class="progress-label"><span>Progres pengerjaan</span><b id="progressText">0 dari 31 selesai</b></div><div class="progress-track"><span id="progressBar"></span></div></div>
+      </div>
+      <div class="toolbar">
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Cari paket atau fitur project..." aria-label="Cari paket"></label>
+        <div class="filters" id="filters">
+          <button class="filter active" data-level="Semua">Semua <span>31</span></button>
+          <button class="filter" data-level="Dasar">Dasar</button>
+          <button class="filter" data-level="Menengah">Menengah</button>
+          <button class="filter" data-level="Lanjutan">Lanjutan</button>
+          <button class="filter" data-level="Sangat Lanjutan">Sangat Lanjutan</button>
+        </div>
+      </div>
+      <div class="package-grid" id="packageGrid"></div>
+      <div class="empty-state hidden" id="emptyState"><div>⌕</div><h3>Paket tidak ditemukan</h3><p>Coba kata kunci atau filter yang berbeda.</p></div>
+    </section>
+
+    <section class="learning-band" id="panduan">
+      <div><div class="eyebrow light">ALUR BELAJAR</div><h2>Dari ide menjadi<br><span>aplikasi nyata.</span></h2><p>Ikuti alur kerja berikut agar project dikerjakan secara terstruktur.</p></div>
+      <div class="steps">
+        <article><b>01</b><div><strong>Pahami studi kasus</strong><small>Baca masalah dan kebutuhan pengguna.</small></div></article>
+        <article><b>02</b><div><strong>Rancang antarmuka</strong><small>Susun struktur HTML dan desain CSS.</small></div></article>
+        <article><b>03</b><div><strong>Bangun interaksi</strong><small>Terapkan DOM, event, function, dan logika.</small></div></article>
+        <article><b>04</b><div><strong>Uji dan presentasikan</strong><small>Periksa fitur, validasi, dan responsivitas.</small></div></article>
+      </div>
+    </section>
+
+    <section class="section evaluation" id="penilaian">
+      <div class="section-heading"><div><div class="eyebrow">UKUR HASIL BELAJAR</div><h2>Rubrik <span>Penilaian</span></h2><p>Masukkan skor setiap aspek untuk menghitung nilai akhir project.</p></div></div>
+      <div class="evaluation-layout">
+        <div class="rubric-list" id="rubricList"></div>
+        <aside class="score-card">
+          <span class="score-kicker">NILAI AKHIR PROJECT</span><div class="score-number" id="scoreTotal">0<span>/100</span></div>
+          <div class="score-status" id="scoreStatus">Belum ada penilaian</div>
+          <div class="score-line"><span id="scoreFill"></span></div>
+          <p>Nilai dihitung berdasarkan skor (0–100) pada setiap aspek dan bobot penilaian.</p>
+          <button class="btn btn-primary full" id="resetScores">Atur ulang nilai</button>
+        </aside>
+      </div>
+    </section>
+    <section class="teacher-note">
+      <div class="note-icon">✦</div><div><strong>Catatan untuk guru</strong><p>Paket dapat dibagikan satu per siswa atau kelompok. Gunakan rubrik sebagai acuan penilaian, lalu minta siswa mendemonstrasikan aplikasi dan menjelaskan kode yang dibuat.</p></div>
+    </section>
+  </main>
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">&lt;/&gt;</span><span>LAB<span class="brand-light">WEB</span><small>MEDIA AJAR INTERAKTIF | By: Mohammad Rusdi</small></span></a><p>Media pembelajaran Pemrograman Web • HTML, CSS, JavaScript</p><span>Belajar · Berkarya · Berinovasi</span></footer>
+
+  <div class="modal-backdrop hidden" id="detailModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <button class="modal-close" id="closeModal" aria-label="Tutup">×</button>
+      <div class="modal-top"><span class="modal-number" id="modalNumber">PAKET 01</span><span class="level-badge" id="modalLevel"></span></div>
+      <h2 id="modalTitle"></h2><p class="modal-case" id="modalCase"></p>
+      <div class="modal-block"><h3><span>▤</span> Fitur yang harus dibuat</h3><ul id="modalFeatures"></ul></div>
+      <div class="challenge-box"><span>✦ TANTANGAN PENGEMBANGAN</span><p id="modalChallenge"></p></div>
+      <div class="task-progress">
+        <div class="progress-label"><strong>Checklist project</strong><span id="taskCount">0/5 selesai</span></div>
+        <div class="progress-track"><span id="taskBar"></span></div>
+        <div id="taskList" class="task-list"></div>
+      </div>
+      <div class="modal-actions"><button class="btn btn-ghost" id="modalCloseBottom">Kembali</button><button class="btn btn-primary" id="completeBtn">Tandai project selesai ✓</button></div>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
